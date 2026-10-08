@@ -1,4 +1,4 @@
-# MEMORY.md — Hoy sí
+# MEMORY.md — Streak
 
 Memoria del repo: decisiones técnicas y estado del proyecto, para retomar fácil en otra sesión. No es un changelog línea por línea, es contexto de alto nivel.
 
@@ -15,7 +15,7 @@ Memoria del repo: decisiones técnicas y estado del proyecto, para retomar fáci
 
 ## Estado actual
 
-- Repo: **https://github.com/fedecalvar/hoy-si** (público), con 9 Issues (#1-#9) ya linkeados al tablero de GitHub Projects "Hoy si" (project #1).
+- Repo: **https://github.com/fedecalvar/streak** (renombrado desde "hoy-si", público), con 9 Issues (#1-#9) ya linkeados al tablero de GitHub Projects "Streak" (project #1).
 - Todavía NO existe: scaffold de Vite/código, contenido real de las skills.
 - Próximos pasos (próxima sesión):
   1. Resolver Issue #1 (duda abierta spec 001) y aprobarla.

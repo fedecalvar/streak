@@ -1,4 +1,4 @@
-# AGENTS.md — Hoy sí
+# AGENTS.md — Streak
 
 Tracker de hábitos personal. Proyecto de estudio y portfolio, pensado para que crear un hábito, marcarlo cumplido y ver la racha sea simple y agradable de usar.
 

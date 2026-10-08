@@ -3,7 +3,7 @@
 Estado: borrador
 
 ## Qué y por qué
-Primera versión funcional de "Hoy sí": crear hábitos, marcarlos como cumplidos día a día, y ver la racha actual. Sin backend ni cuentas — todo en `localStorage` del navegador.
+Primera versión funcional de "Streak": crear hábitos, marcarlos como cumplidos día a día, y ver la racha actual. Sin backend ni cuentas — todo en `localStorage` del navegador.
 
 ## Historias de usuario
 - Crear un hábito con un nombre.
