@@ -15,10 +15,9 @@ Memoria del repo: decisiones técnicas y estado del proyecto, para retomar fáci
 
 ## Estado actual
 
-- Fase: **setup liviano** — `AGENTS.md`, `MEMORY.md`, `specs/001-mvp-habitos/spec.md` (borrador, 1 duda abierta sobre frecuencia), `.claude/skills/*` (3, placeholder).
-- Todavía NO existe: scaffold de Vite/código, repo git, remoto en GitHub, Issues/Projects reales, contenido real de las skills.
+- Repo: **https://github.com/fedecalvar/hoy-si** (público), primer commit subido, 9 Issues creados (#1-#9: duda spec, mockup, scaffold, skills, y las 5 features del MVP).
+- Todavía NO existe: tablero de GitHub Projects, scaffold de Vite/código, contenido real de las skills.
 - Próximos pasos:
-  1. Resolver la duda abierta de la spec 001 y aprobarla.
-  2. Traer contenido real de las 3 skills.
-  3. Crear repo en GitHub + tablero Projects + primeros Issues.
-  4. Generar scaffold Vite + React + Tailwind y arrancar el MVP.
+  1. Crear tablero de GitHub Projects y vincular los 9 Issues.
+  2. Resolver Issue #1 (duda abierta spec 001) y aprobarla.
+  3. Issue #2 (wireframe) y #3 (scaffold Vite+Tailwind) para arrancar el MVP.
