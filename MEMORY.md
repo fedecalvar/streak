@@ -15,9 +15,8 @@ Memoria del repo: decisiones técnicas y estado del proyecto, para retomar fáci
 
 ## Estado actual
 
-- Repo: **https://github.com/fedecalvar/hoy-si** (público), primer commit subido, 9 Issues creados (#1-#9: duda spec, mockup, scaffold, skills, y las 5 features del MVP).
-- Todavía NO existe: tablero de GitHub Projects, scaffold de Vite/código, contenido real de las skills.
-- Próximos pasos:
-  1. Crear tablero de GitHub Projects y vincular los 9 Issues.
-  2. Resolver Issue #1 (duda abierta spec 001) y aprobarla.
-  3. Issue #2 (wireframe) y #3 (scaffold Vite+Tailwind) para arrancar el MVP.
+- Repo: **https://github.com/fedecalvar/hoy-si** (público), con 9 Issues (#1-#9) ya linkeados al tablero de GitHub Projects "Hoy si" (project #1).
+- Todavía NO existe: scaffold de Vite/código, contenido real de las skills.
+- Próximos pasos (próxima sesión):
+  1. Resolver Issue #1 (duda abierta spec 001) y aprobarla.
+  2. Issue #2 (wireframe) y #3 (scaffold Vite+Tailwind) para arrancar el MVP.
