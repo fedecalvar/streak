@@ -1,6 +1,6 @@
 # Spec 001 — MVP de hábitos
 
-Estado: borrador
+Estado: aprobado
 
 ## Qué y por qué
 Primera versión funcional de "Streak": crear hábitos, marcarlos como cumplidos día a día, y ver la racha actual. Sin backend ni cuentas — todo en `localStorage` del navegador.
@@ -19,6 +19,4 @@ Primera versión funcional de "Streak": crear hábitos, marcarlos como cumplidos
 
 ## Fuera de alcance
 Edición retroactiva, backend/multiusuario, notificaciones, gamificación — quedan para specs futuras.
-
-## Duda abierta
-- [NECESITA ACLARACIÓN] ¿Frecuencia distinta a "todos los días" (ej. 3x/semana) entra en este MVP o en una spec futura?
+Frecuencia personalizada (ej. 3x/semana) — en este MVP los hábitos son diarios. Se descarta por ahora para no sumar complejidad al cálculo de racha (ya identificado como el punto más propenso a bugs) antes de tener el MVP funcionando; queda para una spec futura si se decide agregarla.
