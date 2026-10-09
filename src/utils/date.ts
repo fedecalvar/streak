@@ -7,3 +7,8 @@ export function toDateKey(date: Date): DateKey {
   const d = String(date.getDate()).padStart(2, '0')
   return `${y}-${m}-${d}`
 }
+
+export function addDays(key: DateKey, days: number): DateKey {
+  const [y, m, d] = key.split('-').map(Number)
+  return toDateKey(new Date(y, m - 1, d + days))
+}
