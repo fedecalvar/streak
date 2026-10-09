@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  --color-canvas: #F1F3F8;
+  --color-ink: #10143A;
+  --color-ink-soft: #2A2F5E;
+  --color-muted: #5B6080;
+  --color-line: #B5BAD0;
+  --color-accent: #2F45F5;
+  --color-lime: #D3F24B;
+
+  --font-sans: 'Instrument Sans', system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+}
+
+body {
+  @apply bg-canvas text-ink font-sans antialiased;
+}
