@@ -1,5 +1,6 @@
 import type { DateKey } from '../../utils/date.ts'
 import type { Habit } from '../../utils/habits.ts'
+import { calculateStreak } from '../../utils/streak.ts'
 
 interface Props {
   habit: Habit
@@ -9,6 +10,7 @@ interface Props {
 
 function HabitListItem({ habit, today, onToggle }: Props) {
   const done = habit.completedDates.includes(today)
+  const streak = calculateStreak(habit.completedDates, today)
 
   return (
     <li className="flex min-h-[72px] items-center gap-3.5 rounded-[22px] bg-white py-3 pr-2 pl-3">
@@ -31,6 +33,9 @@ function HabitListItem({ habit, today, onToggle }: Props) {
       <div className="flex min-w-0 flex-1 flex-col gap-0.5">
         <span className={`truncate text-[17px] font-semibold ${done ? 'text-muted line-through decoration-[1.5px]' : ''}`}>
           {habit.name}
+        </span>
+        <span className="text-sm text-muted">
+          {streak === 0 ? 'Sin racha todavía' : `Racha de ${streak} ${streak === 1 ? 'día' : 'días'}`}
         </span>
       </div>
     </li>
