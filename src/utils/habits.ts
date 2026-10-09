@@ -20,3 +20,24 @@ export function toggleDate(habit: Habit, day: DateKey): Habit {
     : [...habit.completedDates, day]
   return { ...habit, completedDates }
 }
+
+function isHabit(value: unknown): value is Habit {
+  if (typeof value !== 'object' || value === null) return false
+  const h = value as Record<string, unknown>
+  return (
+    typeof h.id === 'string' &&
+    typeof h.name === 'string' &&
+    Array.isArray(h.completedDates) &&
+    h.completedDates.every((d) => typeof d === 'string')
+  )
+}
+
+export function parseStoredHabits(raw: string | null): Habit[] {
+  if (raw === null) return []
+  try {
+    const data: unknown = JSON.parse(raw)
+    return Array.isArray(data) ? data.filter(isHabit) : []
+  } catch {
+    return []
+  }
+}

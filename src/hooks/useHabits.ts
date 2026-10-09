@@ -1,9 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { DateKey } from '../utils/date.ts'
-import { toggleDate, validateHabitName, type Habit } from '../utils/habits.ts'
+import { parseStoredHabits, toggleDate, validateHabitName, type Habit } from '../utils/habits.ts'
+
+const STORAGE_KEY = 'streak:habits'
+
+function loadHabits(): Habit[] {
+  return parseStoredHabits(localStorage.getItem(STORAGE_KEY))
+}
 
 export function useHabits() {
-  const [habits, setHabits] = useState<Habit[]>([])
+  const [habits, setHabits] = useState<Habit[]>(loadHabits)
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(habits))
+  }, [habits])
 
   function addHabit(rawName: string) {
     const result = validateHabitName(rawName)
