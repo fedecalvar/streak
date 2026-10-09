@@ -13,3 +13,10 @@ export function validateHabitName(raw: string): NameValidation {
   if (name === '') return { ok: false, error: 'El nombre no puede estar vacío.' }
   return { ok: true, name }
 }
+
+export function toggleDate(habit: Habit, day: DateKey): Habit {
+  const completedDates = habit.completedDates.includes(day)
+    ? habit.completedDates.filter((d) => d !== day)
+    : [...habit.completedDates, day]
+  return { ...habit, completedDates }
+}

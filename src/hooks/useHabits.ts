@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { validateHabitName, type Habit } from '../utils/habits.ts'
+import type { DateKey } from '../utils/date.ts'
+import { toggleDate, validateHabitName, type Habit } from '../utils/habits.ts'
 
 export function useHabits() {
   const [habits, setHabits] = useState<Habit[]>([])
@@ -11,5 +12,9 @@ export function useHabits() {
     return result
   }
 
-  return { habits, addHabit }
+  function toggleToday(id: string, today: DateKey) {
+    setHabits((prev) => prev.map((h) => (h.id === id ? toggleDate(h, today) : h)))
+  }
+
+  return { habits, addHabit, toggleToday }
 }
