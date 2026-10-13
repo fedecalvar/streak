@@ -8,11 +8,12 @@ import type { Habit } from '../utils/habits.ts'
 interface Props {
   habits: Habit[]
   onToggle: (id: string, today: DateKey) => void
+  onDelete: (id: string) => void
 }
 
 const dateFormatter = new Intl.DateTimeFormat('es-AR', { weekday: 'long', day: 'numeric', month: 'long' })
 
-function TodayPage({ habits, onToggle }: Props) {
+function TodayPage({ habits, onToggle, onDelete }: Props) {
   const now = useToday()
   const today = toDateKey(now)
   const doneCount = habits.filter((h) => h.completedDates.includes(today)).length
@@ -38,7 +39,7 @@ function TodayPage({ habits, onToggle }: Props) {
             Agregar
           </Link>
         </div>
-        <HabitList habits={habits} today={today} onToggle={(id) => onToggle(id, today)} />
+        <HabitList habits={habits} today={today} onToggle={(id) => onToggle(id, today)} onDelete={onDelete} />
       </section>
     </main>
   )

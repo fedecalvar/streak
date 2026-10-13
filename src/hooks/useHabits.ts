@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { DateKey } from '../utils/date.ts'
-import { parseStoredHabits, toggleDate, validateHabitName, type Habit } from '../utils/habits.ts'
+import { parseStoredHabits, removeHabit, toggleDate, validateHabitName, type Habit } from '../utils/habits.ts'
 
 const STORAGE_KEY = 'streak:habits'
 
@@ -26,5 +26,9 @@ export function useHabits() {
     setHabits((prev) => prev.map((h) => (h.id === id ? toggleDate(h, today) : h)))
   }
 
-  return { habits, addHabit, toggleToday }
+  function deleteHabit(id: string) {
+    setHabits((prev) => removeHabit(prev, id))
+  }
+
+  return { habits, addHabit, toggleToday, deleteHabit }
 }

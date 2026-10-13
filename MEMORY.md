@@ -16,7 +16,7 @@ Memoria del repo: decisiones técnicas y estado del proyecto, para retomar fáci
 ## Estado actual
 
 - Repo: **https://github.com/fedecalvar/streak** (renombrado desde "hoy-si", público), con 9 Issues (#1-#9) ya linkeados al tablero de GitHub Projects "Streak" (project #1).
-- Todavía NO existe: scaffold de Vite/código, contenido real de las skills.
-- Próximos pasos (próxima sesión):
-  1. Resolver Issue #1 (duda abierta spec 001) y aprobarla.
-  2. Issue #2 (wireframe) y #3 (scaffold Vite+Tailwind) para arrancar el MVP.
+- Stack real: Vite + React 19 + **TypeScript** + Tailwind 4 + react-router; lint con oxlint; tests con `npm test` (node --test sobre `tests/*.test.ts`).
+- MVP (spec 001) completo: crear (#5), marcar hoy (#6), racha (#7), persistencia en `localStorage` clave `streak:habits` (#8), borrar con confirmación inline en la tarjeta (#9).
+- Lógica de dominio como funciones puras en `src/utils/` (testeadas); el estado vive en `useHabits` dentro de `App`.
+- Pendiente: Issue #4 (traer contenido real de las skills vendorizadas).

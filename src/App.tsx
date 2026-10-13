@@ -5,12 +5,12 @@ import TodayPage from './pages/TodayPage.tsx'
 
 function App() {
   // El estado vive acá (no en cada página) para que ambas rutas compartan la misma lista de hábitos.
-  const { habits, addHabit, toggleToday } = useHabits()
+  const { habits, addHabit, toggleToday, deleteHabit } = useHabits()
 
   return (
     <div className="mx-auto min-h-screen max-w-md">
       <Routes>
-        <Route path="/" element={<TodayPage habits={habits} onToggle={toggleToday} />} />
+        <Route path="/" element={<TodayPage habits={habits} onToggle={toggleToday} onDelete={deleteHabit} />} />
         <Route path="/nuevo" element={<NewHabitPage onCreate={addHabit} />} />
       </Routes>
     </div>

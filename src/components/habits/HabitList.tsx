@@ -7,9 +7,10 @@ interface Props {
   habits: Habit[]
   today: DateKey
   onToggle: (id: string) => void
+  onDelete: (id: string) => void
 }
 
-function HabitList({ habits, today, onToggle }: Props) {
+function HabitList({ habits, today, onToggle, onDelete }: Props) {
   if (habits.length === 0) {
     return (
       <div className="flex flex-col items-start gap-4 rounded-[22px] border-2 border-dashed border-line px-5 py-6">
@@ -25,7 +26,7 @@ function HabitList({ habits, today, onToggle }: Props) {
   return (
     <ul className="flex flex-col gap-3">
       {habits.map((habit) => (
-        <HabitListItem key={habit.id} habit={habit} today={today} onToggle={onToggle} />
+        <HabitListItem key={habit.id} habit={habit} today={today} onToggle={onToggle} onDelete={onDelete} />
       ))}
     </ul>
   )
