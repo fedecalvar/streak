@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
-import { parseStoredHabits, toggleDate, validateHabitName, type Habit } from '../src/utils/habits.ts'
+import { parseStoredHabits, removeHabit, toggleDate, validateHabitName, type Habit } from '../src/utils/habits.ts'
 
 describe('validateHabitName', () => {
   it('rechaza un nombre vacío', () => {
@@ -45,5 +45,25 @@ describe('parseStoredHabits', () => {
   it('descarta entradas con forma inválida', () => {
     const raw = JSON.stringify([{ id: '1', name: 'Leer', completedDates: [] }, { id: 2 }, 'basura'])
     assert.deepEqual(parseStoredHabits(raw), [{ id: '1', name: 'Leer', completedDates: [] }])
+  })
+})
+
+describe('removeHabit', () => {
+  const habits: Habit[] = [
+    { id: '1', name: 'Leer', completedDates: ['2026-10-08'] },
+    { id: '2', name: 'Correr', completedDates: [] },
+  ]
+
+  it('saca el hábito con ese id junto con su historial', () => {
+    assert.deepEqual(removeHabit(habits, '1'), [{ id: '2', name: 'Correr', completedDates: [] }])
+  })
+
+  it('no cambia nada si el id no existe', () => {
+    assert.deepEqual(removeHabit(habits, '99'), habits)
+  })
+
+  it('no muta la lista original', () => {
+    removeHabit(habits, '1')
+    assert.equal(habits.length, 2)
   })
 })

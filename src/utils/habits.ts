@@ -41,3 +41,7 @@ export function parseStoredHabits(raw: string | null): Habit[] {
     return []
   }
 }
+
+export function removeHabit(habits: Habit[], id: string): Habit[] {
+  return habits.filter((h) => h.id !== id)
+}
