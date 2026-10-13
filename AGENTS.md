@@ -46,7 +46,7 @@ A confirmar una vez inicializado el proyecto con Vite. Esperados:
 
 Vendorizadas en `.claude/skills/<nombre>/SKILL.md` (copiadas al repo, no solo instaladas globalmente), originadas en skills.sh:
 
-- **Vendorizadas** (contenido real pendiente de traer, ver `MEMORY.md`):
+- **Vendorizadas** (copia textual del repo de origen):
   - `.claude/skills/web-design-guidelines/` ← `vercel-labs/agent-skills`
   - `.claude/skills/tdd/` ← `mattpocock/skills`
   - `.claude/skills/code-review/` ← `mattpocock/skills`

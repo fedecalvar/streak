@@ -9,7 +9,7 @@ Memoria del repo: decisiones técnicas y estado del proyecto, para retomar fáci
 - **Vite + React, no Next.js**: frontend-only por ahora, sin backend.
 - **localStorage antes de backend real**: MVP rápido sin DB. Backend es fase futura explícita.
 - **Skills descartadas**: `improve-codebase-architecture` y `vercel-react-best-practices` (pensadas para codebases grandes/Next.js).
-- **Skills vendorizadas en `.claude/skills/`**: `web-design-guidelines`, `tdd`, `code-review`. Contenido real de los `SKILL.md` **todavía no traído** (placeholder).
+- **Skills vendorizadas en `.claude/skills/`**: `web-design-guidelines`, `tdd`, `code-review`. Copia textual de los repos de origen, sin `npx skills` (sin dependencias nuevas) y sin los `agents/openai.yaml` (son para Codex). `web-design-guidelines` baja las reglas de una URL de Vercel en cada uso, como el original.
 - **GitHub Issues/Projects**: un issue por feature/tarea grande, referenciado en commits, movido en el tablero.
 - **SDD completo descartado por sobre-ingeniería**: se había armado una metodología formal (4 agentes, 4 comandos, constitution.md separado) para un proyecto chico — evaluado como desproporcionado para el tamaño real de la app y riesgoso en una entrevista ("bazuca para matar una mosca"). Se simplificó a: 1 `spec.md` liviana por feature grande (solo para la 001), sin agentes/comandos custom ni plan.md/tasks.md separados. El foco pasa a tener el MVP funcionando.
 
@@ -19,4 +19,4 @@ Memoria del repo: decisiones técnicas y estado del proyecto, para retomar fáci
 - Stack real: Vite + React 19 + **TypeScript** + Tailwind 4 + react-router; lint con oxlint; tests con `npm test` (node --test sobre `tests/*.test.ts`).
 - MVP (spec 001) completo: crear (#5), marcar hoy (#6), racha (#7), persistencia en `localStorage` clave `streak:habits` (#8), borrar con confirmación inline en la tarjeta (#9).
 - Lógica de dominio como funciones puras en `src/utils/` (testeadas); el estado vive en `useHabits` dentro de `App`.
-- Pendiente: Issue #4 (traer contenido real de las skills vendorizadas).
+- Skills con contenido real (#4). No quedan Issues abiertos del MVP.
